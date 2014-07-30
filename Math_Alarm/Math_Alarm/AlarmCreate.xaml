@@ -1,0 +1,62 @@
+﻿<phone:PhoneApplicationPage
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    x:Class="Math_Alarm.AlarmCreate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Create Alarm" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <toolkit:TimePicker x:Name="alarmTime" Width="456" HorizontalAlignment="Left" Margin="0,-11,0,465" Header="Time"/>
+            
+            <!--StackPanel for the days of reccurence-->
+            <StackPanel Orientation="Horizontal" Margin="10,85,-10,289" Grid.Row="1">
+                <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10,168,0,206" Grid.Row="1">
+                <TextBlock HorizontalAlignment="Left" Text="Name" Margin="12,0,0,-5"/>
+                <TextBox HorizontalAlignment="Left" Width="456" x:Name="nameTextBox" Text="Alarm"/>
+            </StackPanel>
+            
+            <!--This StackPanel will contain the selectors for the difficulty and number of problems.-->
+            <StackPanel Orientation="Vertical" Margin="10,307,-10,67" Grid.Row="1">
+                <ComboBox x:Name="difficultyBox" HorizontalContentAlignment="Left">
+                    
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/save.png" Text="Save" Click="ApplicationBarSaveButton_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>
