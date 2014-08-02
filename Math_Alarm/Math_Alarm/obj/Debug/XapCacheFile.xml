@@ -1,6 +1,6 @@
-﻿<xapCache source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Bin\Debug\Math_Alarm_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="7/29/2014 15:22:27">
-  <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="7/28/2014 22:53:43" />
-  <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\obj\Debug\Math_Alarm.dll" archivePath="Math_Alarm.dll" lastWriteTime="7/29/2014 15:22:26" />
+﻿<xapCache source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Bin\Debug\Math_Alarm_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="8/2/2014 17:02:43">
+  <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="8/2/2014 16:58:55" />
+  <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\obj\Debug\Math_Alarm.dll" archivePath="Math_Alarm.dll" lastWriteTime="8/2/2014 17:02:42" />
   <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="7/28/2014 19:37:32" />
   <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="7/28/2014 19:37:32" />
   <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="7/28/2014 19:37:32" />
@@ -25,6 +25,6 @@
   <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\packages\WPtoolkit.Kinnara.4.2014.06.10\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="7/28/2014 20:24:05" />
   <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\packages\WPtoolkit.Kinnara.4.2014.06.10\lib\wp8\Microsoft.Phone.Controls.Toolkit.xml" archivePath="Microsoft.Phone.Controls.Toolkit.xml" lastWriteTime="7/28/2014 20:24:05" />
   <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="7/28/2014 19:37:37" />
-  <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="7/29/2014 15:22:26" />
-  <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="7/28/2014 22:53:43" />
+  <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="8/2/2014 17:02:42" />
+  <file source="C:\Users\Trevor\Documents\GitHub\WP8_Math_Alarm\Math_Alarm\Math_Alarm\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="8/2/2014 16:58:55" />
 </xapCache>

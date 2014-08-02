@@ -17,9 +17,8 @@ namespace Math_Alarm
         public AlarmCreate()
         {
             InitializeComponent();
-            difficultyBox.Items.Add("Easy");
-            difficultyBox.Items.Add("Normal");
-            difficultyBox.Items.Add("Hard");
+
+            difficultyPicker.SelectedItem = easyDifficultySelection;
         }
 
         //Code that is executed once the application bar save button is clicked.
@@ -36,14 +35,22 @@ namespace Math_Alarm
             //and sets it to be an actual scheduled service by the OS.
             ScheduledActionService.Add(alarm);
         }
-        
-        //This method will return the level of difficulty that user selects.
-        //private String getDifficulty()
-        //{
-        //    //This line will be assign by the value of the difficultyBox object
-        //    //to the difficultyLvl string once the user makes a selection from it. 
 
-        //    return;
-        //}
+        private void difficultyPicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListPickerItem dpi = difficultyPicker.SelectedItem as ListPickerItem;
+            difficutlyLvl = dpi.ToString();
+        }
+        
+        //This method will return the level of difficulty that the user selects.
+        private String getDifficulty()
+        {
+            return difficutlyLvl;
+        }
+
+        public String getAlarmName()
+        {
+            return nameTextBox.Text.ToString();
+        }
     }
 }
