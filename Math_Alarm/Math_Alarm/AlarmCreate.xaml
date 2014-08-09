@@ -28,7 +28,7 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <ScrollViewer Margin="0,0,10,-211" Grid.Row="1">
+        <ScrollViewer Margin="0,0,10,-200" Grid.Row="1" VerticalScrollBarVisibility="Visible">
             <StackPanel Orientation="Vertical">
                 <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
                     <toolkit:TimePicker x:Name="alarmTime" Width="456" HorizontalAlignment="Left" Margin="0,10,-10,444" Header="Time"/>
@@ -71,7 +71,7 @@
 
                     <!--This StackPanel will contain the selectors for the difficulty and number of problems.-->
                     <StackPanel Orientation="Vertical" Margin="10,283,-10,91">
-                        <toolkit:ListPicker x:Name="difficultyPicker" Header="Difficulty" Margin="0,0,10,0">
+                        <toolkit:ListPicker x:Name="difficultyPicker" Header="Difficulty" Margin="0,0,10,0" ScrollViewer.VerticalScrollBarVisibility="Visible" >
                             <toolkit:ListPickerItem x:Name="easyDifficultySelection" Content="Easy"/>
                             <toolkit:ListPickerItem x:Name="normalDifficultySelection" Content="Normal"/>
                             <toolkit:ListPickerItem x:Name="hardDifficultySelection" Content="Hard"/>
@@ -79,6 +79,7 @@
                         </toolkit:ListPicker>
                     </StackPanel>
                 </Grid>
+                <TextBlock Text="" Height="100"></TextBlock>
             </StackPanel>
         </ScrollViewer>
     </Grid>
