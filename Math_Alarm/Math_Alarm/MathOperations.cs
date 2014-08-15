@@ -24,10 +24,10 @@ namespace Math_Alarm
         Random random = new Random();
 
         //This method creates and outputs problems with 2 values and 1 operator.
-        public int easyProblem()
+        public String easyProblem()
         {
             int operationNum = random.Next(0, 1), answerNum = 0;
-            String operation;
+            String operation, problem;
 
             switch (operationNum)
             {
@@ -43,23 +43,23 @@ namespace Math_Alarm
             {
                 int firstRand = random.Next(0, 10), secondRand = random.Next(0, 10);
                 answerNum = firstRand - secondRand;
-                //This needs to print out the problem so that the user can see it and solve it.
+                problem = firstRand.ToString() + operation + secondRand.ToString();
             }
             else
             {
                 int firstRand = random.Next(0, 10), secondRand = random.Next(0, 10);
                 answerNum = firstRand - secondRand;
-                //This needs to print out the problem so that the user can see it and solve it.
+                problem = firstRand.ToString() + operation + secondRand.ToString();
             }
 
-            return answerNum;
+            return answerNum.ToString() + problem;
         }
 
         //This method creates and outputs problems with 3 values and 2 operations.
-        public int normalProblem()
+        public String normalProblem()
         {
             int operationNum = random.Next(0, 2), answerNum = 0, operationNum2 = random.Next(0, 2);
-            String operation;
+            String operation, operation2, problem;
 
             switch (operationNum)
             {
@@ -77,13 +77,13 @@ namespace Math_Alarm
             switch (operationNum2)
             {
                 case 0:
-                    operation = "-";
+                    operation2 = "-";
                     break;
                 case 1:
-                    operation = "*";
+                    operation2 = "*";
                     break;
                 default:
-                    operation = "+";
+                    operation2 = "+";
                     break;
             }
 
@@ -94,18 +94,20 @@ namespace Math_Alarm
                 {
                     int thirdRand = random.Next(0, 10);
                     answerNum = firstRand - secondRand - thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
                 else if(operationNum2.Equals("*"))
                 {
                     int thirdRand = random.Next(0, 10);
                     answerNum = firstRand - secondRand * thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
                 else
                 {
                     int thirdRand = random.Next(0, 10);
                     answerNum = firstRand - secondRand + thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
-                //This needs to print out the problem so that the user can see it and solve it.
             }
             else if (operation.Equals("*"))
             {
@@ -114,18 +116,20 @@ namespace Math_Alarm
                 {
                     int thirdRand = random.Next(0, 10);
                     answerNum = firstRand * secondRand - thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
                 else if(operationNum2.Equals("*"))
                 {
                     int thirdRand = random.Next(0, 10);
                     answerNum = firstRand * secondRand * thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
                 else
                 {
                     int thirdRand = random.Next(0, 10);
                     answerNum = firstRand * secondRand + thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
-                //This needs to print out the problem so that the user can see it and solve it.
             }
             else
             {
@@ -134,29 +138,31 @@ namespace Math_Alarm
                 {
                     int thirdRand = random.Next(0, 50);
                     answerNum = firstRand + secondRand - thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
                 else if(operationNum2.Equals("*"))
                 {
                     int thirdRand = random.Next(0, 10);
                     answerNum = firstRand + secondRand * thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
                 else
                 {
                     int thirdRand = random.Next(0, 50);
                     answerNum = firstRand + secondRand + thirdRand;
+                    problem = firstRand.ToString() + operation + secondRand.ToString() + operation2 + thirdRand.ToString();
                 }
-                //This needs to print out the problem so that the user can see it and solve it.
             }
 
-            return answerNum;
+            return answerNum.ToString() + problem;
         }
 
         //Hard problems contain problems with a single variable X within them.
         //This kind of problem requires the user to solve for that variable.
-        public int hardProblem()
+        public String hardProblem()
         {
             int operationNum = random.Next(0, 3), answerNum = 0;
-            String operation;
+            String operation, problem;
 
             switch (operationNum)
             {
@@ -178,7 +184,7 @@ namespace Math_Alarm
             {
                 int firstRand = random.Next(0, 10), secondRand = random.Next(0, 10);
                 answerNum = firstRand + secondRand;
-                //This needs to print out the problem so that the user can see it and solve it.
+                problem = " = x" + operation + secondRand.ToString();
             }
             else if (operation.Equals("*"))
             {
@@ -190,6 +196,7 @@ namespace Math_Alarm
                     secondRand = random.Next(0, 10);
                 }
 
+                problem = " = x" + operation + secondRand.ToString();
                 answerNum = secondRand / firstRand;
                 //This needs to print out the problem so that the user can see it and solve it.
             }
@@ -203,16 +210,17 @@ namespace Math_Alarm
                     secondRand = random.Next(0, 10);
                 }
 
+                problem = " = x" + operation + secondRand.ToString();
                 answerNum = firstRand / secondRand;
             }
             else
             {
-                int firstRand = random.Next(0, 10), secondRand = random.Next(0, 10), thirdRand = random.Next(0, 10);
+                int firstRand = random.Next(0, 10), secondRand = random.Next(0, 10);
                 answerNum = firstRand - secondRand;
-                //This needs to print out the problem so that the user can see it and solve it.
+                problem = " = x" + operation + secondRand.ToString();
             }
 
-            return answerNum;
+            return answerNum.ToString() + problem;
         }
 
         //This method creates a very hard problem, which contains calculus.
@@ -222,7 +230,7 @@ namespace Math_Alarm
         public String veryHardProblem()
         {
             int operationNum = random.Next(0, 1);
-            String operation;
+            String operation, problem, answerNum;
 
             switch (operationNum)
             {
@@ -238,14 +246,18 @@ namespace Math_Alarm
             {
                 int randExponent = random.Next(0, 10);
                 int newExponent = randExponent ++, divisor = randExponent;
-                return "1/" + divisor + "x^" + newExponent; 
+                problem = "S of x^" + randExponent;
+                answerNum = "1/" + divisor + "x^" + newExponent;
+                return answerNum + problem;
             }
 
             else
             {
                 int randExponent = random.Next(0, 10);
                 int newExponent = randExponent--, coefficient = randExponent;
-                return coefficient + "x^" + newExponent;
+                problem = "d of x^" + randExponent;
+                answerNum = coefficient + "x^" + newExponent;
+                return answerNum + problem;
             }
         }
     }

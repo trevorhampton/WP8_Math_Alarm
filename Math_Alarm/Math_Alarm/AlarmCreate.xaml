@@ -79,7 +79,7 @@
                         </toolkit:ListPicker>
                     </StackPanel>
                 </Grid>
-                <TextBlock Text="" Height="100"></TextBlock>
+                <TextBlock Text="" Height="100" x:Name="difficultyDescript"></TextBlock>
             </StackPanel>
         </ScrollViewer>
     </Grid>

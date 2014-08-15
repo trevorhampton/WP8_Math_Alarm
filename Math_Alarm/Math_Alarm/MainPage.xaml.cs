@@ -9,16 +9,24 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Math_Alarm.Resources;
 using Microsoft.Phone.Scheduler;
+using Microsoft.Phone.Notification;
+using Windows.Phone.Speech;
 
 namespace Math_Alarm
 {
     public partial class MainPage : PhoneApplicationPage
     {
         IEnumerable<ScheduledNotification> notifications;
+        AlarmCreate alarmCreate = new AlarmCreate();
         // Constructor
         public MainPage()
         {
             InitializeComponent();
+
+            if (isAlarmGoingOff() == true)
+            {
+                NavigationService.Navigate(new Uri("ReminderPage.xaml", UriKind.Relative));
+            }
         }
 
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
@@ -76,5 +84,19 @@ namespace Math_Alarm
         {
             NavigationService.Navigate(new Uri("/AlarmCreate.xaml", UriKind.Relative));
         }
+
+        //Determines if the alarm is currently going off.  Will have to be edited.
+        private bool isAlarmGoingOff()
+        {
+            if (ScheduledActionService.Find(alarmCreate.getAlarmName()).BeginTime.Equals(DateTime.Now))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

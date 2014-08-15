@@ -15,6 +15,8 @@ namespace Math_Alarm
     public partial class AlarmCreate : PhoneApplicationPage
     {
         String difficultyLvl;
+        //Alarms[] alarms;
+
         public AlarmCreate()
         {
             InitializeComponent();
@@ -34,14 +36,18 @@ namespace Math_Alarm
 
             //Adds the alarm created by the user to the list box on the main page
             //and sets it to be an actual scheduled service by the OS.
-            ScheduledActionService.Add(alarm);
             
+            ScheduledActionService.Add(alarm);
         }
 
         //Sets difficultyLvl String to the current selected item in the difficultyPicker ListPicker.
         private void difficultyPicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             difficultyLvl = difficultyPicker.SelectedItem.ToString();
+            if (difficultyLvl.Equals("Very Hard"))
+            {
+                difficultyDescript.Text = "Calculus";
+            }
         }
         
         //This method will return the level of difficulty that the user selects.
